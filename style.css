@@ -9,84 +9,61 @@ body{
     color: white;
 } 
 
- /* #id1{
-  font-size: 2.5rem;
-  border-radius: 5px;
-  margin-left: 0px;
-  padding-left: 0px;
-} 
-
-
-.top-level-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0px 0px 0px 0px;
-  font-family: sans-serif;
-}
-
-.background-img{
-  width: 250px;
-  height: auto;
-  padding-top: 100px;
-  padding-left: 100px;
-}
-.text{
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-top: 50px;
-  color: white;
-  font-size: 50px;
-  margin-left: 0px;
-}
-
-#id2{
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-
-
-} */
-
-.navbar a{
-  color:white;
-  text-decoration:none;
-  margin-left: 18px;
-  font-size: 1.5;
-  opacity: 0.85;
-}
-.navbar {
-  position: absolute;
-  top: 20px;
-  right: 50px;
-}
-
-.navbar a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-#para-id{
-  font-size: 20px;
-  margin-top: 10px;
-}
-#landing-page-image{
-  float: right;
-  width: 30vw;
-  height: 500px;
-  background-size: cover;
-
-}
+/* Landing Page Content */
 #navbar-container{
-  margin-top : 20px
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.navbar{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: 130px;
+  margin-left: 60px;
+  margin-top: 25px;
+}
+.navbar ul li{
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+}
+
+.navbar ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: text-decoration-color 0.2s, text-decoration-thickness 0.2s;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 3px; /* Increased thickness */
+}
+.navbar ul li a:hover {
+  color: #fffefd;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 4px; /* Even bolder on hover */
+}
+
+#landing-page{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/landing-page-image.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
 }
 .landing-page-content{
   margin-top: 10%;
-  font-size: 30px;
-  margin-left: 100px;
-  margin-right: 100px;
-  height: 600px;
+  font-size: 20px;
+  margin-left: 60px;
 }
 .landing-page-content p{
   margin-top: 200px; 
@@ -94,5 +71,12 @@ body{
 
 .landing-page-content h1{
   margin-top: 20px;
+  font-size: 40px;
 
 }
+
+/* End of Landing Page Content */ 
+
+
+
+
