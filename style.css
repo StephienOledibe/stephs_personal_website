@@ -78,5 +78,77 @@ body{
 /* End of Landing Page Content */ 
 
 
+/* ABOUT SECTION */
 
+#about{
+  padding: 80px 0;
+  color: white;
+  border: 2px solid black;
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+.about-col-1{
+  flex-basis: 35%;
+}
+.about-col-1 img{
+  width: 100%;
+  border-radius: 15px;
+  margin-left: 5%;
+  height: 600px;
+}
+
+.about-col-2{
+  flex-basis: 60%;
+}
+
+.sub-title{
+   font-size: 60px;
+   font-weight: 600;
+   color: white;
+}
+.tab-titles{
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links{
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: black;
+  bottom: -5px;
+  left: 0;
+  transition: transform 0.3s; 
+}
+
+.tab-links.active-link::after{
+  width: 50%;
+}
+
+.tab-contents ul li{
+  margin-bottom: 10px;
+  list-style: none;
+}
+.tab-contents ul li span{
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tab-contents{
+  display: none;
+}
+.tab-contents.active-content{
+  display: block;
+}
