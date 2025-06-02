@@ -75,7 +75,7 @@ body{
 
 }
 
-/* End of Landing Page Content */ 
+/* ----------------------------------------------- End of Landing Page Content ----------------------------*/ 
 
 
 /* ABOUT SECTION */
@@ -83,7 +83,7 @@ body{
 #about{
   padding: 80px 0;
   color: white;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .row{
   display: flex;
@@ -97,18 +97,24 @@ body{
 .about-col-1 img{
   width: 100%;
   border-radius: 15px;
-  margin-left: 5%;
+  margin-left: 2%;
   height: 600px;
 }
 
 .about-col-2{
   flex-basis: 60%;
+  margin-right: 2%;
 }
 
 .sub-title{
-   font-size: 60px;
-   font-weight: 600;
-   color: white;
+  font-size: 60px;
+  font-weight: 600;
+  color: white;
+}
+
+/* Align paragraphs in about section */
+.about-col-2 p {
+  text-align: justify;
 }
 .tab-titles{
   display: flex;
@@ -151,4 +157,29 @@ body{
 }
 .tab-contents.active-content{
   display: block;
+}
+/* ----------------------------------------------- About me CSS ends -------------------------------------- */
+.programs-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap; /* Makes it mobile-friendly */
+}
+
+.programs-image {
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.programs-text {
+  width: 55%;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+#programs-sub-title {
+  margin-left: 4%; 
 }

@@ -1,12 +1,13 @@
-// var tablinks = document.getElementsByClassName("tab-links");
-// var tabcontent = document.getElementsByClassName("tab-content");
+    // var tablinks = document.getElementsByClassName("tab-links");
+    // var tabcontents = document.getElementsByClassName("tab-contents");
 
-// function opentab(tabName){
-//     for (tablink of tablinks) {
-//         tablink.classList.remove("active-link");
-//     }
-//     for (tabcontent of tabcontents) {
-//         tabcontent.classList.remove("active-content");
-//     }
-    
-// }
+    // function opentab(tabName){
+    //     for (tablink of tablinks) {
+    //         tablink.classList.remove("active-link");
+    //     }
+    //     for (tabcontent of tabcontents) {
+    //         tabcontent.classList.remove("active-content");
+    //     }
+    //     event.currentTarget.classList.add("active-link");
+    //     document.getElementById(tabName).classList.add("active-content");
+    // }
