@@ -382,3 +382,13 @@ form input, form textarea{
   color: white;
   
 }
+.copyright{
+  text-align: center;
+  padding: 8px 0; /* Reduced vertical padding */
+  color: white;
+  font-weight: 300;
+  margin-top: 10px; /* Reduced margin */
+  width: 100%;
+  background-color: rgb(79, 27, 79);
+  font-size: 14px; /* Optional: slightly smaller text */
+}
