@@ -412,6 +412,7 @@ form input, form textarea{
   width: 30px;
   height: auto;
   color: white;
+  margin-right: 20px;
 }
 nav .icons{
   display: none
