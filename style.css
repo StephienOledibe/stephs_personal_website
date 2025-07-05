@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-sizing: border-box;
 }
 html{
@@ -174,26 +174,30 @@ body{
   display: flex;
   align-items: flex-start;
   gap: 30px;
-  padding: 20px;
-  flex-wrap: wrap; /* Makes it mobile-friendly */
-  
+  padding: 40px 4%;
+  flex-wrap: wrap;
 }
 
 .programs-image {
-  width: 40%;
-  max-width: 500px;
+  flex: 0 0 30%;   /* Shrink to 30% of container */
+  max-width: 350px;
+  max-height: 250px; /* Limit height so it won't overflow text */
+  width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover; /* Keeps the image neat if it's taller */
 }
 
 .programs-text {
-  width: 55%;
+  flex: 1 1 65%;   /* Take remaining space */
   font-size: 16px;
   line-height: 1.6;
   text-align: justify;
+  min-width: 280px;
 }
+
 #programs-sub-title {
-  margin-left: 4%; 
+  margin-left: 4%;
 }
 
 
@@ -249,8 +253,11 @@ body{
   margin-top: 60px; /* Add this line or adjust the value */
 }
 
-/* ................................................end of affiliations ........................................ */
+a.learn-more {
+  text-decoration: underline;
+}
 
+/* ................................................end of affiliations ........................................ */
 #portfolio {
   padding: 150px 0;
   color: white;
@@ -259,7 +266,7 @@ body{
 
 .portfolio-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
   margin: 50px 40px 0 40px;
 }
@@ -270,6 +277,10 @@ body{
   position: relative;
   background-color: #ffffff15; /* subtle transparent box effect */
   transition: transform 0.3s ease;
+
+  /* Make each card flex vertically to keep text aligned */
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-item:hover {
@@ -281,28 +292,27 @@ body{
   height: auto;
   display: block;
   border-bottom: 2px solid #ffffff25;
+  flex-shrink: 0; /* don’t shrink the image */
 }
 
+/* The description box always visible */
 .layer {
   width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(128, 0, 128, 0.2), rgba(128, 0, 128, 0.85)); /* gradient with purple tones */
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(128, 0, 128, 0.2),
+    rgba(128, 0, 128, 0.85)
+  ); /* gradient with purple tones */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   padding: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
   color: white;
-}
-
-.portfolio-item:hover .layer {
-  opacity: 1;
+  opacity: 1; /* always visible */
+  position: static; /* no absolute positioning */
+  flex-grow: 1; /* fill remaining space if needed */
 }
 
 .layer h4 {
@@ -321,9 +331,17 @@ body{
   text-decoration: underline;
   font-weight: bold;
 }
-.projects-subtitle{
+
+.projects-subtitle {
   margin-left: 4%;
 }
+
+.affiliations-list div a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+
 
 /* ----------------------------------------------- End of Portfolio Section ---------------------------- */
 
@@ -425,6 +443,14 @@ nav .icons{
     margin-left: 5%;
     font-size: 12px;
   }
+
+  #landing-page {
+    height: auto;
+    background: none;
+    padding: 60px 0; /* adjust if needed */
+    padding-top: 60px;
+  }
+  
   #navbar-container{
   position: fixed;
   top: 0;
